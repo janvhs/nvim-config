@@ -1,5 +1,6 @@
 -- [[ Configure cmp ]]
 local cmp = require 'cmp'
+local luasnip = require 'luasnip'
 
 -- Reference: https://github.com/hrsh7th/nvim-cmp/wiki/Language-Server-Specific-Samples#golang-gopls
 cmp.setup {
