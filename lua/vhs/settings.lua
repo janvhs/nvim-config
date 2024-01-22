@@ -19,6 +19,15 @@ vim.wo.relativenumber = true
 -- Number of screen lines to keep above and below the cursor
 vim.o.scrolloff = 8
 
+-- Disable word wrap
+vim.o.wrap = false
+
+-- Better buffer splitting
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+vim.o.smoothscroll = true
+
 -- How many characters line-numbers will take up
 -- vim.o.numberwidth = 4
 
@@ -55,5 +64,5 @@ vim.o.timeoutlen = 300
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- Use more colours
+-- Use better colors
 vim.o.termguicolors = true
