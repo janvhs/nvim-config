@@ -1,0 +1,11 @@
+TOODs:
+
+Add ruler
+Add LSP
+Add project local settings
+Configure Netrw
+Enable Spellcheck
+Add Oil.nvim
+Add a better keymap overview
+Check treesitter keymap
+Add missing keybindings for LSP
