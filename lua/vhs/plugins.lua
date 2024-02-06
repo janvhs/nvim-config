@@ -4,9 +4,6 @@ local plugins = {
     {
       -- Rose Pine Theme
       'rose-pine/nvim',
-      name = 'rose-pine',
-      variant = 'moon',
-      priority = 1000,
     },
     {
       -- Statusline (bottom)

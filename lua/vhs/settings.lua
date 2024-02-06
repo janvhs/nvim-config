@@ -9,6 +9,10 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Enable spell checking
+vim.opt.spelllang = 'en_gb'
+vim.opt.spell = true
+
 -- Set highlight on search
 vim.o.hlsearch = true
 
@@ -36,6 +40,7 @@ vim.o.cursorline = true
 
 -- Put space when pressing <TAB>
 -- vim.o.expandtab = true
+-- TODO: enable smarttab
 
 -- Enable mouse mode
 vim.o.mouse = 'a'

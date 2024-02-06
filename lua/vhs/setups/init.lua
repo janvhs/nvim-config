@@ -15,4 +15,4 @@ require 'vhs.setups.fidget'
 
 -- Needs at least luasnip and cmp
 -- TODO: Setup LSP
--- require 'vhs.setups.lsp'
+require 'vhs.setups.lsp'

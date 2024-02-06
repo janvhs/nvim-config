@@ -14,15 +14,15 @@ local on_attach = function(server, bufnr)
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
-  -- nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-  -- nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+  nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+  nmap('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
   -- nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
   -- nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
   -- nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
   -- nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
-  -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+  -- See `:help K` for why this keymap
   -- FIXME: Find an alternative
   -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
@@ -43,3 +43,39 @@ local on_attach = function(server, bufnr)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
 end
+
+-- nvim-cmp supports additional completion capabilities, so broadcast that to servers
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+local lsp = require 'lspconfig'
+
+lsp.gopls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
+lsp.clangd.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
+lsp.lua_ls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
+lsp.ocamllsp.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
+lsp.nixd.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
+lsp.pylsp.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}

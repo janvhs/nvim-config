@@ -1,10 +1,9 @@
 TOODs:
 
 Add ruler
-Add LSP
 Add project local settings
 Configure Netrw
-Enable Spellcheck
+Enable Spellcheck for git
 Add Oil.nvim
 Add a better keymap overview
 Check treesitter keymap
