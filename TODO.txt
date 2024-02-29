@@ -3,7 +3,9 @@ TOODs:
 Add ruler
 Add project local settings
 Configure Netrw
-Enable Spellcheck for git
+Disable last jump for git
+Move accept solution to C-y
+Goto Definition / Ref  in new tab
 Add Oil.nvim
 Add a better keymap overview
 Check treesitter keymap

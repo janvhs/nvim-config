@@ -38,8 +38,12 @@ vim.o.smoothscroll = true
 -- Highlight the line where the cursor is located
 vim.o.cursorline = true
 
+-- Use 4 spaces to display '\t'
+vim.o.tabstop = 4
+-- vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 -- Put space when pressing <TAB>
--- vim.o.expandtab = true
+vim.o.expandtab = false
 -- TODO: enable smarttab
 
 -- Enable mouse mode

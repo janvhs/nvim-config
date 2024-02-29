@@ -79,3 +79,13 @@ lsp.pylsp.setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
+
+-- lsp.sourcekit.setup {
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+-- }
+
+lsp.denols.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
